@@ -1,3 +1,3 @@
-require 'uulanba'
+require './uulanba'
 
 run Sinatra::Application
