@@ -11,11 +11,18 @@
   </head>
   <body>
   	  <h1>Uulan Ba?</h1>
-      <p>Uulan ba sa <%= @city %> in ~2 Hours? <%= @status2hrs %> | <%= @time2hrs %></p>
-      <p>Uulan ba sa <%= @city %> in ~5 Hours? <%= @status5hrs %> | <%= @time5hrs %> </p>
-      <a href="/Taguig">Check Taguig</a><br>
-      <a href="/Makati">Check Makati</a><br>
-      <a href="/Cebu">Check Cebu</a><br>
-      <a href="/Davao">Check Davao</a><br>
+      <form method="POST" action='/'>
+          <label for="city">Eh taga saan ka ba? (Please use single word cities)</label>
+          <input type="text" name="city">
+          <input type="submit" value="I-search">
+      </form>
+      <br>
+      <p>City Name: <%= @name %> </p>
+      <p>Uulan ba sa <%= @city.capitalize %> ngayon? <%= @status2hrs %> | <%= @time2hrs %></p>
+      <p>Uulan ba sa <%= @city.capitalize %> mamaya? <%= @status5hrs %> | <%= @time5hrs %> </p>
+      <p>Uulan ba sa <%= @city.capitalize %> in ~8 Hours? <%= @status8hrs %> | <%= @time8hrs %> </p>
+      <p>Uulan ba sa <%= @city.capitalize %> bukas? <%= @status22hrs %> | <%= @time22hrs %> </p>
+      <p>Uulan ba sa <%= @city.capitalize %> in 2 days? <%= @status48hrs %> | <%= @time48hrs %> </p>
+      <p>Uulan ba sa <%= @city.capitalize %> in 3 days? <%= @status72hrs %> | <%= @time72hrs %> </p>
   </body>
 </html>
