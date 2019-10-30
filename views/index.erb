@@ -10,49 +10,44 @@
     <title>Uulan Ba?</title>
   </head>
   <body>
-      <nav class="nav nav--center">
-        <ul>
-          <li>
-            <a href="/Manila">Manila</a>
-          </li>
-          <li>
-            <a href="/Quezon%20City">Quezon City</a>
-          </li>
-          <li>
-            <a href="/Makati">Makati</a>
-          </li>
-          <li>
-            <a href="/Pasig">Pasig</a>
-          </li>
-          <li>
-            <a href="/Pasay">Pasay</a>
-          </li>
-          <li>
-            <a href="/Taguig">Taguig</a>
-          </li>
-          <li>
-            <a href="/Paranaque">Paranaque</a>
-          </li>
-          <li>
-            <a href="/Mandaluyong">Mandaluyong</a>
-          </li>
-          <li>
-            <a href="/Muntinlupa">Muntinlupa</a>
-          </li>
-          <li>
-            <a href="/San%20Juan">San Juan</a>
-          </li>
-          <li>
-            <a href="/Las%20Pinas">Las Pinas</a>
-          </li>
-          <li>
-            <a href="/Cebu%20City">Cebu City</a>
-          </li>
-          <li>
-            <a href="/Davao%20City">Davao City</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="grid grid--columns-auto-narrow fs-omega color-gray" style="text-align: center">
+          <div>
+            <a class="color-gray-light"  href="/Manila">Manila</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Quezon%20City">Quezon City</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Makati">Makati</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Pasig">Pasig</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Taguig">Taguig</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Paranaque">Paranaque</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Mandaluyong">Mandaluyong</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Muntinlupa">Muntinlupa</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/San%20Juan">San Juan</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Las%20Pinas">Las Pinas</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Cebu%20City">Cebu City</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="/Davao%20City">Davao City</a>
+          </div>
+      </div>
   	  <h1 style="text-align: center">Uulan ba sa <%= @name %>?</h1>
         <p style="text-align: center">Ngayong araw, <%= @time2hrs.strftime("%H:%M %p") %>: <%= @status2hrs %></p>
         <p style="text-align: center">Ngayong araw, <%= @time5hrs.strftime("%H:%M %p") %>: <%= @status5hrs %></p>
