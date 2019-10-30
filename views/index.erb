@@ -10,19 +10,55 @@
     <title>Uulan Ba?</title>
   </head>
   <body>
-  	  <h1>Uulan Ba?</h1>
-      <form method="POST" action='/'>
-          <label for="city">Eh taga saan ka ba? (Please use single word cities)</label>
-          <input type="text" name="city">
-          <input type="submit" value="I-search">
-      </form>
-      <br>
-      <p>City Name: <%= @name %> </p>
-      <p>Uulan ba sa <%= @city.capitalize %> ngayon? <%= @status2hrs %> | <%= @time2hrs %></p>
-      <p>Uulan ba sa <%= @city.capitalize %> mamaya? <%= @status5hrs %> | <%= @time5hrs %> </p>
-      <p>Uulan ba sa <%= @city.capitalize %> in ~8 Hours? <%= @status8hrs %> | <%= @time8hrs %> </p>
-      <p>Uulan ba sa <%= @city.capitalize %> bukas? <%= @status22hrs %> | <%= @time22hrs %> </p>
-      <p>Uulan ba sa <%= @city.capitalize %> in 2 days? <%= @status48hrs %> | <%= @time48hrs %> </p>
-      <p>Uulan ba sa <%= @city.capitalize %> in 3 days? <%= @status72hrs %> | <%= @time72hrs %> </p>
+      <nav class="nav nav--center">
+        <ul>
+          <li>
+            <a href="/Manila">Manila</a>
+          </li>
+          <li>
+            <a href="/Quezon%20City">Quezon City</a>
+          </li>
+          <li>
+            <a href="/Makati">Makati</a>
+          </li>
+          <li>
+            <a href="/Pasig">Pasig</a>
+          </li>
+          <li>
+            <a href="/Pasay">Pasay</a>
+          </li>
+          <li>
+            <a href="/Taguig">Taguig</a>
+          </li>
+          <li>
+            <a href="/Paranaque">Paranaque</a>
+          </li>
+          <li>
+            <a href="/Mandaluyong">Mandaluyong</a>
+          </li>
+          <li>
+            <a href="/Muntinlupa">Muntinlupa</a>
+          </li>
+          <li>
+            <a href="/San%20Juan">San Juan</a>
+          </li>
+          <li>
+            <a href="/Las%20Pinas">Las Pinas</a>
+          </li>
+          <li>
+            <a href="/Cebu%20City">Cebu City</a>
+          </li>
+          <li>
+            <a href="/Davao%20City">Davao City</a>
+          </li>
+        </ul>
+      </nav>
+  	  <h1 style="text-align: center">Uulan ba sa <%= @name %>?</h1>
+        <p style="text-align: center">Ngayong araw, <%= @time2hrs.strftime("%H:%M %p") %>: <%= @status2hrs %></p>
+        <p style="text-align: center">Ngayong araw, <%= @time5hrs.strftime("%H:%M %p") %>: <%= @status5hrs %></p>
+        <p style="text-align: center">Ngayong araw, <%= @time8hrs.strftime("%H:%M %p") %>: <%= @status8hrs %></p>
+        <p style="text-align: center">Kinabukasan, <%= @time22hrs.strftime("%H:%M %p") %>: <%= @status22hrs %></p>
+        <p style="text-align: center">Sa dalawang araw, <%= @time48hrs.strftime("%H:%M %p") %>: <%= @status48hrs %></p>
+        <p style="text-align: center">Sa tatlong araw, <%= @time72hrs.strftime("%H:%M %p") %>: <%= @status72hrs %></p>
   </body>
 </html>
