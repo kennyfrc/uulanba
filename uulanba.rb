@@ -42,7 +42,7 @@ def name_check(api, city = "Manila")
 end
 
 def time_check(api, hours, city = "Manila")
-	hrs = (hours.to_f / 3).ceil
+	hrs = hours / 3
 	json = get_json(api, city)
 	timestamp = json[:list][hrs][:dt].to_s
 	dt = DateTime.strptime(timestamp, "%s").to_time.getlocal("+08:00")
