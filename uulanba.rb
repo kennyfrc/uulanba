@@ -100,8 +100,3 @@ get '/:city' do
 	@status31hrs = status_check(uulanba(API_KEY,31, @city))
 	erb :index
 end
-
-post '/*' do
-	@city = params[:city]
-	redirect "/#{@city}".to_sym
-end
