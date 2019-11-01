@@ -80,7 +80,7 @@ get '/' do
 	erb :index
 end
 
-get '/sa/:city' do
+get '/:city' do
 	@city = "#{params[:city]}" ? "#{params[:city]}" : "Manila"
 	@time2hrs = time_check(API_KEY,2, @city)
 	@time5hrs = time_check(API_KEY,5, @city)
