@@ -9,5 +9,8 @@ SitemapGenerator::Sitemap.create do
   add '/Makati', :changefreq => 'daily'
   add '/Pasig', :changefreq => 'daily'
   add '/Pasay', :changefreq => 'daily'
+  add '/Paranaque', :changefreq => 'daily'
+  add '/Mandaluyong', :changefreq => 'daily'
+  add '/Muntinlupa', :changefreq => 'daily'
 end
 SitemapGenerator::Sitemap.ping_search_engines # Not needed if you use the rake tasks
