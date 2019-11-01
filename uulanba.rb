@@ -59,27 +59,6 @@ def time_check(api, hours, city = "Manila")
 	dt = DateTime.strptime(timestamp, "%s").to_time.getlocal("+08:00")
 end
 
-get '/:city' do
-	@city = "#{params[:city]}" ? "#{params[:city]}" : "Manila"
-	@time2hrs = time_check(API_KEY,2, @city)
-	@time5hrs = time_check(API_KEY,5, @city)
-	@time8hrs = time_check(API_KEY,8, @city)
-	@time11hrs = time_check(API_KEY,11, @city)
-	@time22hrs = time_check(API_KEY,22, @city)
-	@time25hrs = time_check(API_KEY,25, @city)
-	@time28hrs = time_check(API_KEY,28, @city)
-	@time31hrs = time_check(API_KEY,31, @city)
-	@status2hrs = status_check(uulanba(API_KEY, 2, @city))
-	@status5hrs = status_check(uulanba(API_KEY,5,  @city))
-	@status8hrs = status_check(uulanba(API_KEY,8, @city))
-	@status11hrs = status_check(uulanba(API_KEY,11, @city))
-	@status22hrs = status_check(uulanba(API_KEY,22, @city))
-	@status25hrs = status_check(uulanba(API_KEY,25, @city))
-	@status28hrs = status_check(uulanba(API_KEY,28, @city))
-	@status31hrs = status_check(uulanba(API_KEY,31, @city))
-	erb :index
-end
-
 get '/' do
 	@city = "Manila"
 	@time2hrs = time_check(API_KEY,2)
@@ -98,6 +77,27 @@ get '/' do
 	@status25hrs = status_check(uulanba(API_KEY,25))
 	@status28hrs = status_check(uulanba(API_KEY,28))
 	@status31hrs = status_check(uulanba(API_KEY,31))
+	erb :index
+end
+
+get '/sa/:city' do
+	@city = "#{params[:city]}" ? "#{params[:city]}" : "Manila"
+	@time2hrs = time_check(API_KEY,2, @city)
+	@time5hrs = time_check(API_KEY,5, @city)
+	@time8hrs = time_check(API_KEY,8, @city)
+	@time11hrs = time_check(API_KEY,11, @city)
+	@time22hrs = time_check(API_KEY,22, @city)
+	@time25hrs = time_check(API_KEY,25, @city)
+	@time28hrs = time_check(API_KEY,28, @city)
+	@time31hrs = time_check(API_KEY,31, @city)
+	@status2hrs = status_check(uulanba(API_KEY, 2, @city))
+	@status5hrs = status_check(uulanba(API_KEY,5,  @city))
+	@status8hrs = status_check(uulanba(API_KEY,8, @city))
+	@status11hrs = status_check(uulanba(API_KEY,11, @city))
+	@status22hrs = status_check(uulanba(API_KEY,22, @city))
+	@status25hrs = status_check(uulanba(API_KEY,25, @city))
+	@status28hrs = status_check(uulanba(API_KEY,28, @city))
+	@status31hrs = status_check(uulanba(API_KEY,31, @city))
 	erb :index
 end
 
