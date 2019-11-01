@@ -7,6 +7,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.8)
+    builder (3.2.3)
     concurrent-ruby (1.1.5)
     date (2.0.0)
     dotenv (2.7.5)
@@ -31,6 +32,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
+    sitemap_generator (6.0.2)
+      builder (~> 3.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.5)
@@ -47,6 +50,7 @@ DEPENDENCIES
   httparty
   shotgun
   sinatra
+  sitemap_generator
 
 RUBY VERSION
    ruby 2.6.3p62
