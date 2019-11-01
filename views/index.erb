@@ -7,53 +7,72 @@
 
     <!-- Orange CSS -->
     <link rel="stylesheet" href="https://cdn.orangecss.com/1.4.1/css/orange.min.css">
-    <title>Uulan Ba?</title>
+
+    <title>Uulan Ba Ngayon o Bukas?</title>
+    <meta name="description" content="Isang rain forecast o weather forecast sa darating na alawang araw. I-click para alamin kung uulan ba sa sa lugar niyo." />
+    <meta name="keywords" content="uulan ba, rain forecast, weather forecast, uulan ba sa manila" />
+
+    <!-- Tracking Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114915866-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114915866-5');
+    </script>
   </head>
   <body>
       <div class="grid grid--columns-auto-narrow fs-omega color-gray" style="text-align: center">
           <div>
-            <a class="color-gray-light"  href="/Manila">Manila</a>
+            <a class="color-gray-light" target="_self"  href="/Manila">Manila</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Quezon%20City">Quezon City</a>
+            <a class="color-gray-light" target="_self"  href="/Quezon%20City">Quezon City</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Makati">Makati</a>
+            <a class="color-gray-light" target="_self"  href="/Makati">Makati</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Pasig">Pasig</a>
+            <a class="color-gray-light" target="_self"  href="/Pasig">Pasig</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Taguig">Taguig</a>
+            <a class="color-gray-light" target="_self"  href="/Taguig">Taguig</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Paranaque">Paranaque</a>
+            <a class="color-gray-light" target="_self"  href="/Paranaque">Paranaque</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Mandaluyong">Mandaluyong</a>
+            <a class="color-gray-light" target="_self"  href="/Mandaluyong">Mandaluyong</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Muntinlupa">Muntinlupa</a>
+            <a class="color-gray-light" target="_self"  href="/Muntinlupa">Muntinlupa</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/San%20Juan">San Juan</a>
+            <a class="color-gray-light" target="_self"  href="/San%20Juan">San Juan</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Las%20Pinas">Las Pinas</a>
+            <a class="color-gray-light" target="_self"  href="/Las%20Pinas">Las Pinas</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Cebu%20City">Cebu City</a>
+            <a class="color-gray-light" target="_self"  href="/Cebu%20City">Cebu City</a>
           </div>
           <div>
-            <a class="color-gray-light"  href="/Davao%20City">Davao City</a>
+            <a class="color-gray-light" target="_self"  href="/Davao%20City">Davao City</a>
+          </div>
+          <div>
+            <a class="color-gray-light"  href="mailto:marketing@askmonolith.com?Subject=Uulan%20Ba?%20Feedback">Contact Us</a>
           </div>
       </div>
-  	  <h1 style="text-align: center">Uulan ba sa <%= @name %>?</h1>
-        <p style="text-align: center">Ngayong araw, <%= @time2hrs.strftime("%H:%M %p") %>: <%= @status2hrs %></p>
-        <p style="text-align: center">Ngayong araw, <%= @time5hrs.strftime("%H:%M %p") %>: <%= @status5hrs %></p>
-        <p style="text-align: center">Ngayong araw, <%= @time8hrs.strftime("%H:%M %p") %>: <%= @status8hrs %></p>
-        <p style="text-align: center">Kinabukasan, <%= @time22hrs.strftime("%H:%M %p") %>: <%= @status22hrs %></p>
-        <p style="text-align: center">Sa dalawang araw, <%= @time48hrs.strftime("%H:%M %p") %>: <%= @status48hrs %></p>
-        <p style="text-align: center">Sa tatlong araw, <%= @time72hrs.strftime("%H:%M %p") %>: <%= @status72hrs %></p>
+  	  <h1 style="text-align: center">Uulan ba sa <%= @city %>?</h1>
+        <p style="text-align: center"><%= day_check(@time2hrs) %>, <%= @time2hrs.strftime("%H:%M %p") %>: <%= @status2hrs %></p>
+        <p style="text-align: center"><%= day_check(@time5hrs) %>, <%= @time5hrs.strftime("%H:%M %p") %>: <%= @status5hrs %></p>
+        <p style="text-align: center"><%= day_check(@time8hrs) %>, <%= @time8hrs.strftime("%H:%M %p") %>: <%= @status8hrs %></p>
+        <p style="text-align: center"><%= day_check(@time11hrs) %>, <%= @time11hrs.strftime("%H:%M %p") %>: <%= @status11hrs %></p>
+        <p style="text-align: center"><%= day_check(@time22hrs) %>, <%= @time22hrs.strftime("%H:%M %p") %>: <%= @status22hrs %></p>
+        <p style="text-align: center"><%= day_check(@time25hrs) %>, <%= @time25hrs.strftime("%H:%M %p") %>: <%= @status25hrs %></p>
+        <p style="text-align: center"><%= day_check(@time28hrs) %>, <%= @time28hrs.strftime("%H:%M %p") %>: <%= @status28hrs %></p>
+        <p style="text-align: center"><%= day_check(@time31hrs) %>, <%= @time31hrs.strftime("%H:%M %p") %>: <%= @status31hrs %></p>
   </body>
 </html>
