@@ -11,7 +11,7 @@ def status_check(status)
 	if status.include?('rain')
 		"Oo."
 	elsif status.include?('overcast') || status.include?('drizzle') 
-		"Munting ambon lang."
+		"Konting ambon lang."
 	elsif status.include?('storm')
 		"May bagyo."
 	else
