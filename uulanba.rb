@@ -5,7 +5,7 @@ require 'active_support/core_ext'
 require 'dotenv'
 Dotenv.load('.env')
 
-API_KEY = "3f02d0ee5b7adb95a078cc699c8a6663"
+API_KEY = ENV['API_KEY']
 
 def status_check(status)
 	if status.include?('rain')
