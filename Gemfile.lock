@@ -9,7 +9,7 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     builder (3.2.3)
     concurrent-ruby (1.1.5)
-    date (2.0.0)
+    date (2.0.1)
     dotenv (2.7.5)
     httparty (0.17.1)
       mime-types (~> 3.0)
